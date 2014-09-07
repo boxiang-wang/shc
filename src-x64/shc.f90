@@ -1,5 +1,5 @@
 ! --------------------------------------------------------------------------
-! shc.f90: the algorithm for power family. 
+! shc.f90: the algorithm for Holder classifiers. 
 ! --------------------------------------------------------------------------
 ! This code was build upon the foundation of Yi Yang's gcdnet code.
 ! The author appreciated the great help from Yi Yang. 
@@ -13,7 +13,7 @@
 ! 
 ! INPUT ARGUMENTS:
 ! 
-!    q = the parameter in the power family model. 
+!    q = the parameter in the Holder classifiers 
 !    lam2 = regularization parameter for the quadratic penalty of the coefficients
 !    nobs = number of observations
 !    nvars = number of predictor variables
