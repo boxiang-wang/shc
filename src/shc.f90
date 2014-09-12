@@ -821,7 +821,6 @@
          ni = npass
          capM = (q + 1.0D0) ** 2.0D0 / q !!!
          maj = maj * capM !!!
-      call dblepr("M", -1, capM ,1)
 ! decision boundary of loss function
          decib = q / (q + 1.0D0)
          fdr = - decib ** (q + 1.0D0)
