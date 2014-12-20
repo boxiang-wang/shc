@@ -78,16 +78,16 @@ getmin <- function(lambda, cvm, cvsd) {
     cvmin <- min(cvm)
     idmin <- cvm <= cvmin
     lambda.min <- max(lambda[idmin])
+    cv.min <- max(cvm[idmin])
     idmin <- match(lambda.min, lambda)
     semin <- (cvm + cvsd)[idmin]
     idmin <- cvm <= semin
-    # cat('\n\nidmin\n\n',idmin)
-    # cat('\n\nlambda[idmin]\n\n',lambda[idmin])
-    # cat('\n\nmax\n\n',max(lambda[idmin]))
     lambda.1se <- max(lambda[idmin])
-    list(lambda.min = lambda.min, lambda.1se = lambda.1se)
-}
+    cv.1se <- cvm[lambda == lambda.1se]
 
+    list(lambda.min = lambda.min, lambda.1se = lambda.1se, 
+         cvm.min = cv.min, cvm.1se = cv.1se)
+}
 
 getoutput <- function(fit, maxit, pmax, nvars, vnames) {
     nalam <- fit$nalam
