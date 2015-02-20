@@ -11,7 +11,8 @@ cv.holderNET,
 predict.shc,
 coef.shc,
 coef.hsvmlassoNET,
-coef.holderNET
+coef.holderNET,
+q.shc
 )
 
 S3method("print","shc")
